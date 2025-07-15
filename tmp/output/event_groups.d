@@ -1,0 +1,16 @@
+.\tmp\output\event_groups.o: FreeRTOS\src\event_groups.c
+.\tmp\output\event_groups.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\tmp\output\event_groups.o: .\FreeRTOS\include\FreeRTOS.h
+.\tmp\output\event_groups.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stddef.h
+.\tmp\output\event_groups.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdint.h
+.\tmp\output\event_groups.o: .\Hardware\FreeRTOSConfig.h
+.\tmp\output\event_groups.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h
+.\tmp\output\event_groups.o: .\FreeRTOS\include\projdefs.h
+.\tmp\output\event_groups.o: .\FreeRTOS\include\portable.h
+.\tmp\output\event_groups.o: .\FreeRTOS\include\deprecated_definitions.h
+.\tmp\output\event_groups.o: .\FreeRTOS\portable\RVDS\ARM_CM4F\portmacro.h
+.\tmp\output\event_groups.o: .\FreeRTOS\include\mpu_wrappers.h
+.\tmp\output\event_groups.o: .\FreeRTOS\include\task.h
+.\tmp\output\event_groups.o: .\FreeRTOS\include\list.h
+.\tmp\output\event_groups.o: .\FreeRTOS\include\timers.h
+.\tmp\output\event_groups.o: .\FreeRTOS\include\event_groups.h

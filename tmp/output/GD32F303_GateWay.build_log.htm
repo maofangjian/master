@@ -1,0 +1,74 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: mao Administrator, 1, LIC=ATTQ1-CRDMQ-124LE-5VJQ8-5LI24-VECS5
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.24.1
+Toolchain Path:  M:\KEIL5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DCM.DLL V1.16.0.0
+Target DLL:      Segger\JL2CM3.dll V2.99.26.0
+Dialog DLL:      TCM.DLL V1.32.0.0
+ 
+<h2>Project:</h2>
+C:\Users\Administrator\Desktop\充电桩代码\FreeRtos 0715\13.FreeRTOS实验\GD32.uvprojx
+Project File Date:  07/15/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'M:\KEIL5\ARM\ARMCC\Bin'
+Build target 'GateWay'
+compiling Device_check.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\CHECK\Device_check.c(270): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+          App_Get_Rtc_Time(day);
+Hardware\APP\CHECK\Device_check.c(317): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
+                  if(ret == FAIL)
+Hardware\APP\CHECK\Device_check.c: 3 warnings, 0 errors
+compiling charge.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\CHARGE\charge.c(24): warning:  #223-D: function "Delay_ms" declared implicitly
+      Delay_ms(100);
+Hardware\APP\CHARGE\charge.c(47): warning:  #177-D: variable "portinfo"  was declared but never referenced
+      SystemPortInfo_t *portinfo = &SystemOrderInfo[port-1];
+Hardware\APP\CHARGE\charge.c(208): warning:  #177-D: variable "chgpara_time"  was declared but never referenced
+  	uint32_t chgpara_time;
+Hardware\APP\CHARGE\charge.c: 4 warnings, 0 errors
+compiling main.c...
+Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\main.c(59): warning:  #223-D: function "App_Audio_Data_Init" declared implicitly
+      App_Audio_Data_Init();
+Hardware\main.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=67020 RO-data=1920 RW-data=688 ZI-data=64768  
+After Build - User command #1: fromelf --bin  -o  .\tmp\output\charge.bin   .\tmp\output\GD32F303_GateWay.axf
+".\tmp\output\GD32F303_GateWay.axf" - 0 Error(s), 9 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: GigaDevice
+                https://gd32mcu.com/data/documents/pack/GigaDevice.GD32F30x_DFP.2.2.3.pack
+                GigaDevice.GD32F30x_DFP.2.2.3
+                GigaDevice GD32F30x Series Device Support and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_GateWay
+  M:\KEIL5\ARM\PACK\GigaDevice\GD32F30x_DFP\2.2.3\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

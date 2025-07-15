@@ -1,0 +1,10 @@
+.\tmp\output\cjson.o: JSON\cJSON.c
+.\tmp\output\cjson.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\string.h
+.\tmp\output\cjson.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h
+.\tmp\output\cjson.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\math.h
+.\tmp\output\cjson.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\tmp\output\cjson.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\limits.h
+.\tmp\output\cjson.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\ctype.h
+.\tmp\output\cjson.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\float.h
+.\tmp\output\cjson.o: JSON\cJSON.h
+.\tmp\output\cjson.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stddef.h

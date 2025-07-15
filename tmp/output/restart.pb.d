@@ -1,0 +1,7 @@
+.\tmp\output\restart.pb.o: Library\ProtoBuf\msg_type\Restart.pb.c
+.\tmp\output\restart.pb.o: Library\ProtoBuf\msg_type\Restart.pb.h
+.\tmp\output\restart.pb.o: .\Library\ProtoBuf\pb.h
+.\tmp\output\restart.pb.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\tmp\output\restart.pb.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+.\tmp\output\restart.pb.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\tmp\output\restart.pb.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\string.h

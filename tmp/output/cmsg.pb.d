@@ -1,0 +1,9 @@
+.\tmp\output\cmsg.pb.o: Library\ProtoBuf\msg_pack\cmsg.pb.c
+.\tmp\output\cmsg.pb.o: .\Library\ProtoBuf\msg_pack/cmsg.pb.h
+.\tmp\output\cmsg.pb.o: .\Library\ProtoBuf\pb.h
+.\tmp\output\cmsg.pb.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
+.\tmp\output\cmsg.pb.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+.\tmp\output\cmsg.pb.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\tmp\output\cmsg.pb.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\string.h
+.\tmp\output\cmsg.pb.o: .\Library\ProtoBuf\google/protobuf/any.pb.h
+.\tmp\output\cmsg.pb.o: .\Library\ProtoBuf\msg_pack/commonhead.pb.h
