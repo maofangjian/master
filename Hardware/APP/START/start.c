@@ -25,9 +25,9 @@ void System_Start_Config(void)
     memcpy(SystemInfo.mqttpassword,MQTT_USER_PASSWORD,sizeof(MQTT_USER_PASSWORD));
     SystemInfo.serverport = MQTT_SERVER_PORT;
     //Bsp_GetId(SystemInfo.device_id);
-    memcpy(SystemInfo.device_id,"00000000006",sizeof("00000000006"));
+    //memcpy(SystemInfo.device_id,"00000000006",sizeof("00000000006"));
     LOG("Soft version :%s\r\n",SOFT_VERSION);
-    LOG("serurl:%s  serverport:%d mqttcount:%s mqttpassword:%s device_id:%s\r\n",SystemInfo.serverurl,SystemInfo.serverport,SystemInfo.mqttcount,SystemInfo.mqttpassword,SystemInfo.device_id);
+    LOG("serurl:%s  serverport:%d mqttcount:%s mqttpassword:%s \r\n",SystemInfo.serverurl,SystemInfo.serverport,SystemInfo.mqttcount,SystemInfo.mqttpassword);
 
 }
 

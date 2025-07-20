@@ -610,6 +610,7 @@ void BswSrv_McardCheck(void)
     if (TypeA_CardActivate(PICC_ATQA, PICC_UID, PICC_SAK) == OK) 
     {
         sprintf(cardKeyA,"%02x%02x%02x%02x",PICC_UID[0], PICC_UID[1], PICC_UID[2], PICC_UID[3]);
+        //sprintf(cardKeyA,"%s","67ceb2a6");
 		LOG("find card:%s  %02x%02x%02x%02x.\n",cardKeyA, PICC_UID[0], PICC_UID[1], PICC_UID[2], PICC_UID[3]);		
 		memcpy(AES_UID,PICC_UID,32);
 		card_picc_uid =  (PICC_UID[0]<<24) | (PICC_UID[1]<<16) | (PICC_UID[2]<<8) | (PICC_UID[3]<<0);
@@ -692,7 +693,7 @@ void App_McardProcess(void)
 	{
 		gChgInfo.McardCheckFlag = MCARD_IDLE;
         App_CkbProtoCardCtrol(0);
-
+        printf("card idle status\r\n");
 	}
 }
 
@@ -713,7 +714,6 @@ void BswSrv_McardTask(void *param)
         {
             BswSrv_McardCheck();
         }
-        
         vTaskDelay(50);
     }
 }

@@ -228,7 +228,7 @@ int App_Fuse_Check(uint8_t port,uint8_t check_all)
         time = App_GetRtcCount();
         high_duty = (Fuse_Det[port].high_time*100)/Fuse_Det[port].total_time;
         low_duty = (Fuse_Det[port].low_time*100)/Fuse_Det[port].total_time;
-        LOG("port :%d duty:%d high_duty :%d low_duty :%d total:%d\r\n",port,high_duty,Fuse_Det[port].high_time,Fuse_Det[port].low_time,Fuse_Det[port].total_time);
+        //LOG("port :%d duty:%d high_duty :%d low_duty :%d total:%d\r\n",port,high_duty,Fuse_Det[port].high_time,Fuse_Det[port].low_time,Fuse_Det[port].total_time);
         if (high_duty >= 85 && low_duty < 15 && Fuse_Det[port].total_time > 50)  //保险丝异常
         {
             Bsp_GetPortStatus(port,&port_data);

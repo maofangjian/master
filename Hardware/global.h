@@ -66,13 +66,13 @@
 
 #define TaskInit_Stack_SIZE								(64)
 #define APP_MAIN_TASK_DELAY_MS                    	    (20)
-#define APP_MAIN_TASK_PRIORITY						    (tskIDLE_PRIORITY+11)
+#define APP_MAIN_TASK_PRIORITY						    (tskIDLE_PRIORITY+15)
 #define APP_MAIN_TASK_STACK_SIZE					    (TaskInit_Stack_SIZE*20)
 
-#define APP_CHARGE_TASK_PRIORITY						(tskIDLE_PRIORITY+15)
+#define APP_CHARGE_TASK_PRIORITY						(tskIDLE_PRIORITY+10)
 #define APP_CHARGE_TASK_STACK_SIZE					    (TaskInit_Stack_SIZE*20)
 
-#define APP_TEMP_TASK_PRIORITY						    (tskIDLE_PRIORITY+16)
+#define APP_TEMP_TASK_PRIORITY						    (tskIDLE_PRIORITY+10)
 #define APP_TEMP_TASK_STACK_SIZE					    (TaskInit_Stack_SIZE*2)
 
 #define Abs_Ec200s_TASK_PRIORITY            			(tskIDLE_PRIORITY+13)
@@ -84,13 +84,13 @@
 #define APP_UPGRADE_TASK_PRIORITY            			(tskIDLE_PRIORITY+10)
 #define APP_UPGRADE_TASK_STACK_SIZE          			(TaskInit_Stack_SIZE*10)
 
-#define APP_MCARD_TASK_PRIORITY            			    (tskIDLE_PRIORITY+15)
+#define APP_MCARD_TASK_PRIORITY            			    (tskIDLE_PRIORITY+12)
 #define APP_MCARD_TASK_STACK_SIZE          			    (TaskInit_Stack_SIZE*10)
 
-#define APP_VOICE_TASK_PRIORITY            			    (tskIDLE_PRIORITY+15)
+#define APP_VOICE_TASK_PRIORITY            			    (tskIDLE_PRIORITY+10)
 #define APP_VOICE_TASK_STACK_SIZE          			    (TaskInit_Stack_SIZE*7)
 
-#define APP_DIS_TASK_PRIORITY            			    (tskIDLE_PRIORITY+15)
+#define APP_DIS_TASK_PRIORITY            			    (tskIDLE_PRIORITY+12)
 #define APP_DIS_TASK_STACK_SIZE          			    (TaskInit_Stack_SIZE*3)
 #endif
 

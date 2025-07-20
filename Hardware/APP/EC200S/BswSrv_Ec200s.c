@@ -185,7 +185,6 @@ void Srv_Ec200s_Task(void *pvParameters)
 				if(receveData == ':')
 				{
 					/*  +QMTRECV: <client_idx>,<msgid>,<topic>[,<payload_len>],<payload>
-                        +QMTRECV: 0,1,"cs/cz21a/414674111535363137393950",40,"1234567890123456789012345678901234567890"
                     */
 					if((strncmp((void *)BswComSrvTempBuffer,"+QMTRECV",strlen("+QMTRECV")) == 0)
                         || (strncmp((void *)BswComSrvTempBuffer,"+QMTSTAT",strlen("+QMTSTAT")) == 0)

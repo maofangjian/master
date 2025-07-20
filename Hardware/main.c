@@ -72,7 +72,7 @@ void App_Main_Task(void *pvParameters)
     taskEXIT_CRITICAL(); //退出临界区
     while (1)
     {
-        vTaskDelay(50);
+        vTaskDelay(20);
         
         FEED_WDG();
         if(App_GetRtcCount() - time != 0)
@@ -80,7 +80,7 @@ void App_Main_Task(void *pvParameters)
             tick++;
             time = App_GetRtcCount();
             App_Qrledtoggle();
-            LOG("time :%d Heap size %x\r\n",time,xPortGetFreeHeapSize());
+            // LOG("time :%d Heap size %x\r\n",time,xPortGetFreeHeapSize());
             App_CkbConnectStatuProc();
             if(SystemInfo.connect_server_flag)  //连接服务器
             {
@@ -140,6 +140,7 @@ void App_Main_Task(void *pvParameters)
         {
             App_McardProcess();
         } 
+
     }
 
     

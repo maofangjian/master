@@ -17,6 +17,7 @@
 #define SOCKET_ID (0)
 
 uint8_t Location_status = 0;
+uint8_t apn_info[64];
 ABS_EC200S_INFO AbstrEc200sInfo = {0};									//相关数据信息
 volatile ABS_EC200S_INIT_STATE AbstrEc200sGprsInitState = EC200S_RESET; //初始化状态
 uint8_t AbstrEc200sBuffer[1024] = {0};							//Ec200s数据缓冲
@@ -78,7 +79,7 @@ const ABS_EC200S_INIT_T AbstrEc200sGprsInitTable[] =
 		{(void *)"AT+CSQ\r", (void *)"OK", 1000, 150, Abstr_Ec200sCheckCSQ},	    //查看信号强度
         {(void *)"AT+COPS?\r",(void *)"OK",1000,50,Abstr_Ec200sCheckCOPS},			//获取网络状态
         {(void *)"AT+QNWINFO\r",(void *)"OK",1000,50,Abstr_Ec200sCheckQNWINFO},		//获取网络状态
-        {(void *)"AT+QICSGP=1,1,\"CMNET\",\"\",\"\",1\r", (void *)"OK", 1000, 20, Abstr_Ec200sQICSGP },//设置APN
+        {(void *)apn_info, (void *)"OK", 1000, 20, Abstr_Ec200sQICSGP },//设置APN
         {(void *)"AT+QIDEACT=1\r", (void *)"OK", 4000, 100, Abstr_Ec200sQIDEACT },  //禁用PDP上下文,关闭移动场景
         {(void *)"AT+QIACT=1\r", (void *)"OK", 50000, 10, Abstr_Ec200sQIACT },       //激活PDP上下文，打开移动场景   
         {(void *)"AT+QIACT?\r", (void *)".", 5000, 10, Abstr_Ec200sQIACT},         //获取IP
@@ -113,6 +114,15 @@ void GetCcidSn(int8_t *pStr)
     				memcpy((void *)AbstrEc200sInfo.ec200sIccid, &pStr[i], ICCID_LEN);
     				AbstrEc200sInfo.ec200sIccid[ICCID_LEN] = 0;
     				memcpy((void *)SystemInfo.sim_id,(void *)AbstrEc200sInfo.ec200sIccid, ICCID_LEN);
+					if (strstr(AbstrEc200sInfo.ec200sIccid,"898604") != NULL)
+					{
+						memcpy(apn_info,"AT+QICSGP=1,1,\"CMNET\",\"\",\"\",1\r",sizeof("AT+QICSGP=1,1,\"CMNET\",\"\",\"\",1\r"));
+					}
+					else
+					{
+						memcpy(apn_info,"AT+QICSGP=1,1,\"CTNET\",\"\",\"\",1\r",sizeof("AT+QICSGP=1,1,\"CMNET\",\"\",\"\",1\r"));
+					}
+					
     				EC200S_DEBUG("SIM ICCID: %s.\r\n", AbstrEc200sInfo.ec200sIccid);
     				return;
     			}
@@ -127,7 +137,7 @@ void GetCnum(int8_t *pStr)
 {
 	EC200S_DEBUG("CNUM=%s\r\n",pStr);
 }
-
+/*  */
 
 void GetModuleImei(int8_t *pStr)
 {
@@ -139,7 +149,7 @@ void GetModuleImei(int8_t *pStr)
 		switch (flag)
 		{
 		    case 0:
-    			if ((0x0a == pStr[i]) || (0x0d == pStr[i]))
+    			if ((0x0a == pStr[i]) || (0x0d == pStr[i]))/*  */
     			{
     				flag = 1;
     			}
@@ -149,8 +159,10 @@ void GetModuleImei(int8_t *pStr)
     			{
     				memset((void *)AbstrEc200sInfo.ec200sImei,0,MODULE_IMEI_LEN+1);
     				memcpy((void *)AbstrEc200sInfo.ec200sImei, &pStr[i], MODULE_IMEI_LEN);
-    				
+    				memcpy(SystemInfo.device_id,AbstrEc200sInfo.ec200sImei,sizeof(AbstrEc200sInfo.ec200sImei));
+    				LOG("device id  :%s\r\n",SystemInfo.device_id);
     				EC200S_DEBUG("Module imei: %s.\r\n", AbstrEc200sInfo.ec200sImei);
+					Abstr_Ec200sMqttInit();
     				return;
     			}
 			break;
@@ -458,7 +470,7 @@ int32_t Abstr_Ec200sCheckRes(int8_t *cmd, int8_t *res, uint16_t tmo)
     memset(AbstrEc200sBuffer, 0, sizeof(AbstrEc200sBuffer));
 	for (uint16_t time = 0; time < tmo; time += 10)
 	{ //等待时间
-		vTaskDelay(10);
+		vTaskDelay(50);
 		FEED_WDG();
         cnt = 0;
         c = 0;
@@ -2267,7 +2279,7 @@ START:
 			for(cnt=0; cnt < 10; cnt++)
 			{
 				FEED_WDG();
-				vTaskDelay(10);
+				vTaskDelay(50);
 				memset(AbstrEc200sBuffer, 0, sizeof(AbstrEc200sBuffer));
 				BswDrv_Ec200s_FifoFlush(); 
 				getDataLen = Abstr_Ec200sGetHttpData((char*)url_file, HttpFileOffsetSize, AbstrEc200sBuffer, HttpGetLen);
@@ -2473,8 +2485,8 @@ void App_UpgradeTask(void *pvParameters)
 void Abstr_Ec200sTask(void)
 {
     AbstrEc200sMutex = xSemaphoreCreateRecursiveMutex();
-    
-    Abstr_Ec200sMqttInit();
+
+    //Abstr_Ec200sMqttInit();
 	while (1)
 	{
 		Abstr_Ec200sReconnect();

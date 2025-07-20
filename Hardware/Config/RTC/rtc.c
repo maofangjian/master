@@ -1,6 +1,6 @@
 #include "rtc.h"
 #include "global.h"
-static uint32_t rtc_time = 0;
+static  uint32_t rtc_time = 0;
 //时间戳转换为时间
 int Rtc_To_Realtime(time_t time, uint8_t *Day)
 {

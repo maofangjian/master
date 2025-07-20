@@ -435,7 +435,7 @@ uint8_t FM175XX_HardReset(void)
     uint8_t reg_data = 0xFF;
 	
     NPD_LOW();        
-    vTaskDelay(10);
+    vTaskDelay(50);
     NPD_HIGH();
 //    vTaskDelay(1000);
 	vTaskDelay(100);

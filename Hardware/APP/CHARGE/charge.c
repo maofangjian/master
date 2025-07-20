@@ -114,7 +114,7 @@ void App_PowerControl(uint8_t port,uint32_t power,SystemPortInfo_t *portinfo)
         }
         else
         {
-            if((rtc_time - portinfo->startTime) >= 120)  //两分钟检测拔出
+            if((rtc_time - portinfo->startTime) >= 120 )  //两分钟检测拔出
             {
                 time = rtc_time - chargeinfo->starttime;
                 if((power == 0) && (time >= 30))
@@ -407,7 +407,7 @@ void App_ChagreControl(void)
         {
             gunChargingFullToExitInfo[i-1].ChargeFullExitFlag = 0;
         }
-        vTaskDelay(10);
+        vTaskDelay(50);
     }
 }
 
@@ -422,7 +422,7 @@ void App_ChargeTask(void *pvParameters)
     App_Relay_Control_All(OFF);  //关闭所有继电器
     while (1)
     {
-        vTaskDelay(100);
+        vTaskDelay(50);
         if(App_GetRtcCount() - time != 0)
         {
             time = App_GetRtcCount();

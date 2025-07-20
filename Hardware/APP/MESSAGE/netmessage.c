@@ -122,7 +122,6 @@ void App_HeartBeatSendMessage(void)
             order_data[n][0] = '\0';
         }
         
-
     }
     
     cJSON_AddItemToObject(root,"device_id",cJSON_CreateString(SystemInfo.device_id));
@@ -177,7 +176,7 @@ void App_HeartBeatSendMessage(void)
         free(json_body);
     }
     heart_error_times++;
-    if(heart_error_times >= 4)
+    if(heart_error_times >= 3)
     {
         heart_error_times = 0;
         SystemInfo.onlineflag = FALSE;
@@ -199,7 +198,7 @@ void App_SendCardAuthReq(uint8_t flag)
     data = cJSON_CreateObject();
 
     cJSON_AddItemToObject(root,"device_id",cJSON_CreateString(SystemInfo.device_id));
-    cJSON_AddNumberToObject(root,"cmd",NET_CMD_REMOTE_CHARG);
+    cJSON_AddNumberToObject(root,"cmd",NET_CMD_NFC_REQ);
     cJSON_AddNumberToObject(root,"timestamp",time);
     cJSON_AddNumberToObject(data,"port",gChgInfo.current_usr_gun_id);
     cJSON_AddNumberToObject(data,"mcard_type",flag);

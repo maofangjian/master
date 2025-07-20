@@ -180,7 +180,6 @@ void App_audio_task(void *pvParameters)
         PA_DISABLE;
         dma_channel_disable(DMA0,DMA_CH4);
         
-        
     } 
 }
 

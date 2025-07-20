@@ -19,7 +19,7 @@ void App_CkbConnectStatuProc(void)
 {
 	
     uint32_t currentTime = App_GetRtcCount(); 
-    if (currentTime - lastRecvCkbMsgTime >= 180)
+    if (currentTime - lastRecvCkbMsgTime >= 180 && currentTime - lastRecvCkbMsgTime <= 0xffff)
     {
 		LOG("long time no recv keyBoard msg, reset.\r\n");
         lastRecvCkbMsgTime =  currentTime;
@@ -300,7 +300,7 @@ void App_CkbProtoTask(void *pvParameters)
         		break;
         	}
         }
-        vTaskDelay(100);
+        vTaskDelay(20);
     }
     
 }

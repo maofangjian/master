@@ -274,7 +274,7 @@ extern volatile ABS_EC200S_INIT_STATE AbstrEc200sGprsInitState;
 extern ABS_EC200S_INFO AbstrEc200sInfo;
 
 
-
+void Abstr_Ec200sMqttInit(void);
 
 
 int32_t Abstr_Ec200sSendCmd(int8_t *cmd, int8_t *ack, uint16_t waittime, int32_t flag);
