@@ -96,9 +96,9 @@ uint8_t BswSrv_Ec200sAnalyseGprsData(uint8_t* data)
     args = cJSON_PrintUnformatted(Data);
     LOG("args :%s\r\n",args);
     App_NetMessagePro(args,cmd->valueint,sizeof(args));
-    cJSON_Delete(root); 
-    free(json_data); 
-    free(args);
+    if (root != NULL)cJSON_Delete(root); 
+    if (json_data != NULL)free(json_data); 
+    if (args != NULL)free(args);
 FREE:
     if (gprsString != NULL)
     {

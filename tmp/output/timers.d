@@ -1,10 +1,10 @@
 .\tmp\output\timers.o: FreeRTOS\src\timers.c
-.\tmp\output\timers.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\tmp\output\timers.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\tmp\output\timers.o: .\FreeRTOS\include\FreeRTOS.h
-.\tmp\output\timers.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stddef.h
-.\tmp\output\timers.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdint.h
+.\tmp\output\timers.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+.\tmp\output\timers.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\tmp\output\timers.o: .\Hardware\FreeRTOSConfig.h
-.\tmp\output\timers.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h
+.\tmp\output\timers.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\tmp\output\timers.o: .\FreeRTOS\include\projdefs.h
 .\tmp\output\timers.o: .\FreeRTOS\include\portable.h
 .\tmp\output\timers.o: .\FreeRTOS\include\deprecated_definitions.h

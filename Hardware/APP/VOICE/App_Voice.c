@@ -20,8 +20,24 @@
  */
 void BswSrv_TtsPlayStartChgTip(uint8_t gunId)
 {
-    play_item[0] = gunId+2;
-    play_item[1] = AUDIO_17;
+    if (gunId < 10)
+    {
+        play_item[0] = gunId+2;
+        play_item[1] = AUDIO_17;
+    }
+    else if (gunId == 10)
+    {
+        play_item[0] = AUDIO_11;
+        play_item[1] = AUDIO_17;
+    }
+    else
+    {
+        play_item[0] = AUDIO_11;
+        play_item[1] = gunId%10+2;
+        play_item[2] = AUDIO_17; 
+    }
+    
+
 }
 
 /**
@@ -33,8 +49,22 @@ void BswSrv_TtsPlayStartChgTip(uint8_t gunId)
  */
 void BswSrv_TtsPlayStopChgTip(uint8_t gunId)
 {
-    play_item[0] = gunId+2;
-    play_item[1] = AUDIO_18;
+    if (gunId < 10)
+    {
+        play_item[0] = gunId+2;
+        play_item[1] = AUDIO_18;
+    }
+    else if (gunId == 10)
+    {
+        play_item[0] = AUDIO_11;
+        play_item[1] = AUDIO_18;
+    }
+    else
+    {
+        play_item[0] = AUDIO_11;
+        play_item[1] = gunId%10+2;
+        play_item[2] = AUDIO_18; 
+    }
 }
 
 /**

@@ -40,7 +40,7 @@ typedef enum
     AUDIO_05,   //4
     AUDIO_06,   //5
     AUDIO_07,   //6
-    AUDIO_08,   //4
+    AUDIO_08,   //7
     AUDIO_09,   //8
     AUDIO_10,   //9
     AUDIO_11,   //十

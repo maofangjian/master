@@ -2,7 +2,7 @@
 .\tmp\output\gd32f30x_enet.o: .\Library\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h
 .\tmp\output\gd32f30x_enet.o: .\Library\Firmware\CMSIS\GD\GD32F30x\Include\gd32f30x.h
 .\tmp\output\gd32f30x_enet.o: .\Library\Firmware\CMSIS\core_cm4.h
-.\tmp\output\gd32f30x_enet.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdint.h
+.\tmp\output\gd32f30x_enet.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\tmp\output\gd32f30x_enet.o: .\Library\Firmware\CMSIS\core_cmInstr.h
 .\tmp\output\gd32f30x_enet.o: .\Library\Firmware\CMSIS\core_cmFunc.h
 .\tmp\output\gd32f30x_enet.o: .\Library\Firmware\CMSIS\core_cm4_simd.h
@@ -32,4 +32,4 @@
 .\tmp\output\gd32f30x_enet.o: .\Library\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h
 .\tmp\output\gd32f30x_enet.o: .\Library\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h
 .\tmp\output\gd32f30x_enet.o: .\Library\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h
-.\tmp\output\gd32f30x_enet.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\tmp\output\gd32f30x_enet.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h

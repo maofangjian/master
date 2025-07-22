@@ -44,7 +44,9 @@
 #include <limits.h>
 #include <ctype.h>
 #include <float.h>
-
+#include "FreeRTOS.h"
+#include "task.h"
+#include "semphr.h"
 #ifdef ENABLE_LOCALES
 #include <locale.h>
 #endif
@@ -90,7 +92,7 @@ typedef struct {
     size_t position;
 } error;
 static error global_error = { NULL, 0 };
-
+static SemaphoreHandle_t json_mutex;
 CJSON_PUBLIC(const char *) cJSON_GetErrorPtr(void)
 {
     return (const char*) (global_error.json + global_error.position);
@@ -210,6 +212,7 @@ CJSON_PUBLIC(void) cJSON_InitHooks(cJSON_Hooks* hooks)
 {
     if (hooks == NULL)
     {
+        json_mutex = xSemaphoreCreateMutex();
         /* Reset hooks */
         global_hooks.allocate = malloc;
         global_hooks.deallocate = free;
@@ -1279,7 +1282,10 @@ CJSON_PUBLIC(char *) cJSON_Print(const cJSON *item)
 
 CJSON_PUBLIC(char *) cJSON_PrintUnformatted(const cJSON *item)
 {
-    return (char*)print(item, false, &global_hooks);
+    xSemaphoreTake(json_mutex, portMAX_DELAY);
+    char *ret = (char*)print(item, false, &global_hooks);
+    xSemaphoreGive(json_mutex);
+    return ret;
 }
 
 CJSON_PUBLIC(char *) cJSON_PrintBuffered(const cJSON *item, int prebuffer, cJSON_bool fmt)

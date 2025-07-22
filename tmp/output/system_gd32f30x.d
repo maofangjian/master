@@ -1,7 +1,7 @@
 .\tmp\output\system_gd32f30x.o: Library\Firmware\CMSIS\GD\GD32F30x\Source\system_gd32f30x.c
 .\tmp\output\system_gd32f30x.o: .\Library\Firmware\CMSIS\GD\GD32F30x\Include\gd32f30x.h
 .\tmp\output\system_gd32f30x.o: .\Library\Firmware\CMSIS\core_cm4.h
-.\tmp\output\system_gd32f30x.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdint.h
+.\tmp\output\system_gd32f30x.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\tmp\output\system_gd32f30x.o: .\Library\Firmware\CMSIS\core_cmInstr.h
 .\tmp\output\system_gd32f30x.o: .\Library\Firmware\CMSIS\core_cmFunc.h
 .\tmp\output\system_gd32f30x.o: .\Library\Firmware\CMSIS\core_cm4_simd.h

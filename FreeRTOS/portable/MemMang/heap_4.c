@@ -112,6 +112,11 @@ PRIVILEGED_DATA static size_t xBlockAllocatedBit = 0;
 
 /*-----------------------------------------------------------*/
 
+// 实现钩子函数
+void vApplicationMallocFailedHook(void) {
+    printf("Malloc failed! Free heap: %u\n", xPortGetFreeHeapSize());
+}
+
 void * pvPortMalloc( size_t xWantedSize )
 {
     BlockLink_t * pxBlock, * pxPreviousBlock, * pxNewBlockLink;

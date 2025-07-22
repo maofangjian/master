@@ -2,8 +2,8 @@
  * @Author: chenyuan
  * @Date: 2025-07-03 15:04:33
  * @LastEditors: chenyuan
- * @LastEditTime: 2025-07-09 11:22:40
- * @FilePath: \FreeRtos实验0703\13.FreeRTOS实验\Hardware\main.c
+ * @LastEditTime: 2025-07-22 15:45:01
+ * @FilePath: \master\Hardware\main.c
  * @Description: 
  * 
  * Copyright (c) 2025 by ${git_name_email}, All Rights Reserved. 
@@ -47,9 +47,9 @@
 #include "i2s.h"
 #include "App_CkbProto.h"
 #include "Device_check.h"
-
 TaskHandle_t Ec200sAbstrTask_Handle;
 TaskHandle_t SrcEc200sAbstrTask_Handle;
+
 void App_Main_Task(void *pvParameters)
 {
     uint32_t time;
@@ -87,7 +87,7 @@ void App_Main_Task(void *pvParameters)
                 if(SystemInfo.onlineflag == 0) //还未登录
                 {
                     ledstatus = LED_FLASH;
-                    if(time%30 == 0)
+                    if(time%10 == 0)
                     {
                         login_cnt++;
                         App_StartUpMessage();
@@ -117,7 +117,6 @@ void App_Main_Task(void *pvParameters)
                     {
                         App_HeartBeatSendMessage();
                     }
-                    App_SendChargeStartNotify();
                     
                     if(tick % 15 == 0)
                     {  

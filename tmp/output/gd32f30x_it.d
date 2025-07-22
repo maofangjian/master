@@ -2,7 +2,7 @@
 .\tmp\output\gd32f30x_it.o: Hardware\gd32f30x_it.h
 .\tmp\output\gd32f30x_it.o: .\Library\Firmware\CMSIS\GD\GD32F30x\Include\gd32f30x.h
 .\tmp\output\gd32f30x_it.o: .\Library\Firmware\CMSIS\core_cm4.h
-.\tmp\output\gd32f30x_it.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdint.h
+.\tmp\output\gd32f30x_it.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\tmp\output\gd32f30x_it.o: .\Library\Firmware\CMSIS\core_cmInstr.h
 .\tmp\output\gd32f30x_it.o: .\Library\Firmware\CMSIS\core_cmFunc.h
 .\tmp\output\gd32f30x_it.o: .\Library\Firmware\CMSIS\core_cm4_simd.h
@@ -34,9 +34,9 @@
 .\tmp\output\gd32f30x_it.o: .\Library\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h
 .\tmp\output\gd32f30x_it.o: Hardware\systick.h
 .\tmp\output\gd32f30x_it.o: .\FreeRTOS\include\FreeRTOS.h
-.\tmp\output\gd32f30x_it.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stddef.h
+.\tmp\output\gd32f30x_it.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
 .\tmp\output\gd32f30x_it.o: .\Hardware\FreeRTOSConfig.h
-.\tmp\output\gd32f30x_it.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h
+.\tmp\output\gd32f30x_it.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\tmp\output\gd32f30x_it.o: .\FreeRTOS\include\projdefs.h
 .\tmp\output\gd32f30x_it.o: .\FreeRTOS\include\portable.h
 .\tmp\output\gd32f30x_it.o: .\FreeRTOS\include\deprecated_definitions.h

@@ -2,7 +2,7 @@
 .\tmp\output\gd32f30x_pmu.o: .\Library\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h
 .\tmp\output\gd32f30x_pmu.o: .\Library\Firmware\CMSIS\GD\GD32F30x\Include\gd32f30x.h
 .\tmp\output\gd32f30x_pmu.o: .\Library\Firmware\CMSIS\core_cm4.h
-.\tmp\output\gd32f30x_pmu.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdint.h
+.\tmp\output\gd32f30x_pmu.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\tmp\output\gd32f30x_pmu.o: .\Library\Firmware\CMSIS\core_cmInstr.h
 .\tmp\output\gd32f30x_pmu.o: .\Library\Firmware\CMSIS\core_cmFunc.h
 .\tmp\output\gd32f30x_pmu.o: .\Library\Firmware\CMSIS\core_cm4_simd.h

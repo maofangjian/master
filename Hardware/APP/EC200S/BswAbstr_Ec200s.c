@@ -470,7 +470,7 @@ int32_t Abstr_Ec200sCheckRes(int8_t *cmd, int8_t *res, uint16_t tmo)
     memset(AbstrEc200sBuffer, 0, sizeof(AbstrEc200sBuffer));
 	for (uint16_t time = 0; time < tmo; time += 10)
 	{ //等待时间
-		vTaskDelay(50);
+		Delay_ms(20);
 		FEED_WDG();
         cnt = 0;
         c = 0;
@@ -2093,7 +2093,7 @@ static int Abstr_Ec200sGetHttpData(char *file,uint32_t fileOffset,uint8_t *pBuff
 	while (tmo) 
 	{
 		FEED_WDG();
-		vTaskDelay(50);
+		Delay_ms(20);
 		tmo -= 50;
 		while (BswDrv_Ec200s_GetCharFromFifo(&c) == TRUE) 
 		{
@@ -2266,7 +2266,7 @@ START:
 		
 		while (1)
 		{
-			vTaskDelay(20);
+			Delay_ms(20);
 			FEED_WDG();
 			if(AbstrEc200sInfo.ec200sState.Bits.ec200sStopHttpState == 1)		//收到HTTP关闭指令
 			{
@@ -2279,7 +2279,7 @@ START:
 			for(cnt=0; cnt < 10; cnt++)
 			{
 				FEED_WDG();
-				vTaskDelay(50);
+				Delay_ms(20);
 				memset(AbstrEc200sBuffer, 0, sizeof(AbstrEc200sBuffer));
 				BswDrv_Ec200s_FifoFlush(); 
 				getDataLen = Abstr_Ec200sGetHttpData((char*)url_file, HttpFileOffsetSize, AbstrEc200sBuffer, HttpGetLen);

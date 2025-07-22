@@ -1,8 +1,8 @@
 .\tmp\output\fifo.o: Hardware\Config\FIFO\fifo.c
 .\tmp\output\fifo.o: Hardware\Config\FIFO\Fifo.h
-.\tmp\output\fifo.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h
-.\tmp\output\fifo.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\string.h
-.\tmp\output\fifo.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdint.h
+.\tmp\output\fifo.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
+.\tmp\output\fifo.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\string.h
+.\tmp\output\fifo.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\tmp\output\fifo.o: .\Library\Firmware\CMSIS\GD\GD32F30x\Include\gd32f30x.h
 .\tmp\output\fifo.o: .\Library\Firmware\CMSIS\core_cm4.h
 .\tmp\output\fifo.o: .\Library\Firmware\CMSIS\core_cmInstr.h
@@ -36,11 +36,11 @@
 .\tmp\output\fifo.o: .\Library\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h
 .\tmp\output\fifo.o: .\Hardware\global.h
 .\tmp\output\fifo.o: .\Hardware\Config\WATCHDOG\watchdog.h
-.\tmp\output\fifo.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\math.h
-.\tmp\output\fifo.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdlib.h
-.\tmp\output\fifo.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\time.h
+.\tmp\output\fifo.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\math.h
+.\tmp\output\fifo.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\tmp\output\fifo.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\time.h
 .\tmp\output\fifo.o: .\FreeRTOS\include\FreeRTOS.h
-.\tmp\output\fifo.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stddef.h
+.\tmp\output\fifo.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
 .\tmp\output\fifo.o: .\Hardware\FreeRTOSConfig.h
 .\tmp\output\fifo.o: .\FreeRTOS\include\projdefs.h
 .\tmp\output\fifo.o: .\FreeRTOS\include\portable.h

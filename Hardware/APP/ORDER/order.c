@@ -97,10 +97,11 @@ void App_GenerateOrderInfo(uint8_t port)
      App_Led_Ctrl(portinfo->gunId,LED_ON);
     App_Relay_Control(portinfo->gunId,OFF);
     App_CkbProtoLedCtrol(port,PORTIDLE);
+    BswSrv_TtsPlayStopChgTip(portinfo->gunId);
     memcpy(order.orderNo,portinfo->order,sizeof(portinfo->order));
     memset(portinfo,0,sizeof(SystemPortInfo_t));
     App_WriteOrder(&order);
-    BswSrv_TtsPlayStopChgTip(portinfo->gunId);
+    App_System_Order_Save();
     
 }
 

@@ -68,7 +68,7 @@
                                                                         //用户必须提供一个栈溢出钩子函数，如果使用的话
                                                                         //此值可以为1或者2，因为有两种栈溢出检测方法。
 #define configUSE_RECURSIVE_MUTEXES				1                       //为1时使用递归互斥信号量
-#define configUSE_MALLOC_FAILED_HOOK			0                       //1使用内存申请失败钩子函数
+#define configUSE_MALLOC_FAILED_HOOK			1                       //1使用内存申请失败钩子函数
 #define configUSE_APPLICATION_TASK_TAG			0
 #define configUSE_COUNTING_SEMAPHORES			1                       //为1时使用计数信号量
 

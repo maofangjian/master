@@ -1,0 +1,53 @@
+.\output\init.o: ..\..\Hardware\init.c
+.\output\init.o: ..\..\Hardware\init.h
+.\output\init.o: ..\..\Hardware\FC265.h
+.\output\init.o: ..\..\Hardware\MyType.h
+.\output\init.o: D:\Program Files (x86)\keil_arm\ARM\ARMCC\Bin\..\include\stdint.h
+.\output\init.o: D:\Program Files (x86)\keil_arm\ARM\ARMCC\Bin\..\include\stdio.h
+.\output\init.o: D:\Program Files (x86)\keil_arm\ARM\ARMCC\Bin\..\include\stdlib.h
+.\output\init.o: D:\Program Files (x86)\keil_arm\ARM\ARMCC\Bin\..\include\string.h
+.\output\init.o: ..\..\Hardware\SysTick.h
+.\output\init.o: ..\..\Firmware\CMSIS\GD\GD32F30x\Include\gd32f30x.h
+.\output\init.o: ..\..\Firmware\CMSIS\core_cm4.h
+.\output\init.o: ..\..\Firmware\CMSIS\core_cmInstr.h
+.\output\init.o: ..\..\Firmware\CMSIS\core_cmFunc.h
+.\output\init.o: ..\..\Firmware\CMSIS\core_cm4_simd.h
+.\output\init.o: ..\..\Firmware\CMSIS\GD\GD32F30x\Include\system_gd32f30x.h
+.\output\init.o: ..\gd32f30x_libopt.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_rcu.h
+.\output\init.o: ..\..\Firmware\CMSIS\GD\GD32F30x\Include\gd32f30x.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_adc.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_can.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_crc.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_ctc.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_dac.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_dbg.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_dma.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_exti.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_fmc.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_fwdgt.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_gpio.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_i2c.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_pmu.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_bkp.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_rtc.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_sdio.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_spi.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_timer.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_usart.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_wwdgt.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_enet.h
+.\output\init.o: ..\..\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h
+.\output\init.o: ..\..\Hardware\global.h
+.\output\init.o: ..\..\Hardware\crc.h
+.\output\init.o: ..\..\Hardware\backlight.h
+.\output\init.o: ..\..\Hardware\control.h
+.\output\init.o: ..\..\Hardware\di.h
+.\output\init.o: ..\..\Hardware\do.h
+.\output\init.o: ..\..\Hardware\ao.h
+.\output\init.o: ..\..\Hardware\lcdc.h
+.\output\init.o: ..\..\Hardware\ht16c22.h
+.\output\init.o: ..\..\Hardware\lcdc.h
+.\output\init.o: ..\..\Hardware\buzzer.h
+.\output\init.o: ..\..\Hardware\key.h

@@ -2,7 +2,7 @@
 .\tmp\output\watchdog.o: Hardware\Config\WATCHDOG\watchdog.h
 .\tmp\output\watchdog.o: .\Library\Firmware\CMSIS\GD\GD32F30x\Include\gd32f30x.h
 .\tmp\output\watchdog.o: .\Library\Firmware\CMSIS\core_cm4.h
-.\tmp\output\watchdog.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdint.h
+.\tmp\output\watchdog.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\tmp\output\watchdog.o: .\Library\Firmware\CMSIS\core_cmInstr.h
 .\tmp\output\watchdog.o: .\Library\Firmware\CMSIS\core_cmFunc.h
 .\tmp\output\watchdog.o: .\Library\Firmware\CMSIS\core_cm4_simd.h

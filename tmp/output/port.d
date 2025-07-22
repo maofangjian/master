@@ -1,9 +1,9 @@
 .\tmp\output\port.o: FreeRTOS\portable\RVDS\ARM_CM4F\port.c
 .\tmp\output\port.o: .\FreeRTOS\include\FreeRTOS.h
-.\tmp\output\port.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stddef.h
-.\tmp\output\port.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdint.h
+.\tmp\output\port.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+.\tmp\output\port.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\tmp\output\port.o: .\Hardware\FreeRTOSConfig.h
-.\tmp\output\port.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h
+.\tmp\output\port.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\tmp\output\port.o: .\FreeRTOS\include\projdefs.h
 .\tmp\output\port.o: .\FreeRTOS\include\portable.h
 .\tmp\output\port.o: .\FreeRTOS\include\deprecated_definitions.h

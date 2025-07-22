@@ -527,13 +527,13 @@ ARM Macro Assembler    Page 9
   339 0000001C                 END
               00000000 
               00000000 
-Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
-erwork --depend=.\tmp\output\startup_gd32f30x_hd.d -o.\tmp\output\startup_gd32f
-30x_hd.o -I.\RTE\_GateWay -IM:\KEIL5\ARM\PACK\GigaDevice\GD32F30x_DFP\2.2.3\Dev
-ice\Include -IM:\KEIL5\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --pred
-efine="__UVISION_VERSION SETA 524" --predefine="GD32F30X_HD SETA 1" --list=.\tm
-p\list\startup_gd32f30x_hd.lst Library\Firmware\CMSIS\GD\GD32F30x\Source\ARM\st
-artup_gd32f30x_hd.s
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
+interwork --depend=.\tmp\output\startup_gd32f30x_hd.d -o.\tmp\output\startup_gd
+32f30x_hd.o -I.\RTE\_GateWay -ID:\swtool\Keil5\Packs\GigaDevice\GD32F30x_DFP\2.
+2.3\Device\Include -ID:\swtool\Keil5\ARM\CMSIS\Include --predefine="__MICROLIB 
+SETA 1" --predefine="__UVISION_VERSION SETA 529" --predefine="GD32F30X_HD SETA 
+1" --list=.\tmp\list\startup_gd32f30x_hd.lst Library\Firmware\CMSIS\GD\GD32F30x
+\Source\ARM\startup_gd32f30x_hd.s
 
 
 

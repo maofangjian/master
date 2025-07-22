@@ -14,6 +14,7 @@
 #include "sys.h"
 #include "led.h"
 #include "charge.h"
+#include "cJSON.h"
 System_Config SystemInfo;
 
 //系统启动初始化
@@ -28,7 +29,7 @@ void System_Start_Config(void)
     //memcpy(SystemInfo.device_id,"00000000006",sizeof("00000000006"));
     LOG("Soft version :%s\r\n",SOFT_VERSION);
     LOG("serurl:%s  serverport:%d mqttcount:%s mqttpassword:%s \r\n",SystemInfo.serverurl,SystemInfo.serverport,SystemInfo.mqttcount,SystemInfo.mqttpassword);
-
+    cJSON_InitHooks(NULL);
 }
 
 void App_System_Order_Save(void)

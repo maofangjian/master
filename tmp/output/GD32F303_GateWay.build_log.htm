@@ -3,30 +3,226 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: ¦ÌVision V5.24.2.0
-Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: mao Administrator, 1, LIC=ATTQ1-CRDMQ-124LE-5VJQ8-5LI24-VECS5
+IDE-Version: ¦ÌVision V5.29.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 111 111, 111, LIC=QF82M-XUG9B-45ZT5-G0JNJ-CDLAE-87KHM
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.24.1
-Toolchain Path:  M:\KEIL5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 5 (build 528)
-Assembler:       Armasm.exe V5.06 update 5 (build 528)
-Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
-Library Manager: ArmAr.exe V5.06 update 5 (build 528)
-Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
-CPU DLL:         SARMCM3.DLL V5.24.1
-Dialog DLL:      DCM.DLL V1.16.0.0
-Target DLL:      Segger\JL2CM3.dll V2.99.26.0
-Dialog DLL:      TCM.DLL V1.32.0.0
+Toolchain:       MDK-ARM Plus  Version: 5.29.0.0
+Toolchain Path:  D:\swtool\Keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.29.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      Segger\JL2CM3.dll V2.99.36.0
+Dialog DLL:      TCM.DLL V1.36.5.0
  
 <h2>Project:</h2>
-C:\Users\Administrator\Desktop\³äµç×®´úÂë\FreeRtos 0715\GD32.uvprojx
-Project File Date:  07/19/2025
+F:\FreeRtosÊµÑé0703\freertos-git\master\GD32.uvprojx
+Project File Date:  07/22/2025
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'M:\KEIL5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\swtool\Keil5\ARM\ARMCC\Bin'
 Build target 'GateWay'
+compiling gd32f30x_fmc.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Library\Firmware\GD32F30x_standard_peripheral\Source\gd32f30x_fmc.c: 1 warning, 0 errors
+compiling system.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\Config\SYSTEM\system.c: 1 warning, 0 errors
+compiling sys.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\Config\SYS\sys.c(297): warning:  #167-D: argument of type "const uint8_t *" is incompatible with parameter of type "const char *"
+      int len = strlen(hexStr);
+Hardware\Config\SYS\sys.c(300): warning:  #167-D: argument of type "const uint8_t *" is incompatible with parameter of type "const char *restrict"
+          sscanf(hexStr + i, "%2x", &val); // è§£æžä¸¤ä¸ªå­—ç¬¦ä¸ºåå…­è¿›åˆ¶æ•°
+Hardware\Config\SYS\sys.c(304): warning:  #1-D: last line of file ends without a newline
+  }
+Hardware\Config\SYS\sys.c: 4 warnings, 0 errors
+compiling main.c...
+Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\main.c(59): warning:  #223-D: function "App_Audio_Data_Init" declared implicitly
+      App_Audio_Data_Init();
+Hardware\main.c: 2 warnings, 0 errors
+compiling led.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\LED\led.c(80): warning:  #1-D: last line of file ends without a newline
+  }
+Hardware\APP\LED\led.c: 2 warnings, 0 errors
+compiling i2s.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\Config\I2S\i2s.c(170): warning:  #223-D: function "Delay_ms" declared implicitly
+                          Delay_ms(200);
+Hardware\Config\I2S\i2s.c(213): warning:  #1-D: last line of file ends without a newline
+  }
+Hardware\Config\I2S\i2s.c: 3 warnings, 0 errors
+compiling timer.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\Config\TIMER\timer.c(7): warning:  #177-D: variable "Sys_Timer_Msg"  was declared but never referenced
+  static SYSTIMERMSG	Sys_Timer_Msg[TIMERMSGNUM];
+Hardware\Config\TIMER\timer.c: 2 warnings, 0 errors
+compiling adc.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\Config\ADC\adc.c: 1 warning, 0 errors
+compiling rtc.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\Config\RTC\rtc.c(160): warning:  #1-D: last line of file ends without a newline
+  }
+Hardware\Config\RTC\rtc.c: 2 warnings, 0 errors
+compiling gpio.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\Config\GPIO\gpio.c: 1 warning, 0 errors
+compiling fifo.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\Config\FIFO\fifo.c: 1 warning, 0 errors
+compiling flash.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\FLASH\flash.c: 1 warning, 0 errors
+compiling relay_control.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\RELAY\relay_control.c: 1 warning, 0 errors
+compiling charge.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\CHARGE\charge.c(24): warning:  #223-D: function "Delay_ms" declared implicitly
+      Delay_ms(100);
+Hardware\APP\CHARGE\charge.c(47): warning:  #177-D: variable "portinfo"  was declared but never referenced
+      SystemPortInfo_t *portinfo = &SystemOrderInfo[port-1];
+Hardware\APP\CHARGE\charge.c(208): warning:  #177-D: variable "chgpara_time"  was declared but never referenced
+  	uint32_t chgpara_time;
+Hardware\APP\CHARGE\charge.c: 4 warnings, 0 errors
+compiling meter.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\METER\meter.c: 1 warning, 0 errors
+compiling start.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\START\start.c: 1 warning, 0 errors
+compiling BswDrv_Ec200s.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\EC200S\BswDrv_Ec200s.c(22): warning:  #223-D: function "Delay_ms" declared implicitly
+  	Delay_ms(1000);
+Hardware\APP\EC200S\BswDrv_Ec200s.c(28): warning:  #223-D: function "Delay_ms" declared implicitly
+  	Delay_ms(1000);
+Hardware\APP\EC200S\BswDrv_Ec200s.c: 3 warnings, 0 errors
+compiling order.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\ORDER\order.c(99): warning:  #223-D: function "App_CkbProtoLedCtrol" declared implicitly
+      App_CkbProtoLedCtrol(port,PORTIDLE);
+Hardware\APP\ORDER\order.c: 2 warnings, 0 errors
+compiling BswSrv_Ec200s.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\EC200S\BswSrv_Ec200s.c(42): warning:  #223-D: function "App_GetRtcCount" declared implicitly
+      uint32_t time = App_GetRtcCount();
+Hardware\APP\EC200S\BswSrv_Ec200s.c(93): warning:  #223-D: function "App_Set_Rtc_Time" declared implicitly
+          App_Set_Rtc_Time(timestamp->valueint);
+Hardware\APP\EC200S\BswSrv_Ec200s.c(96): warning:  #513-D: a value of type "char *" cannot be assigned to an entity of type "uint8_t *"
+      args = cJSON_PrintUnformatted(Data);
+Hardware\APP\EC200S\BswSrv_Ec200s.c(46): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "json_start"  (declared at line 58)
+            variable "json_len"  (declared at line 63)
+            variable "json_data"  (declared at line 64)
+            variable "root"  (declared at line 71)
+            variable "device_id"  (declared at line 73)
+            variable "cmd"  (declared at line 79)
+            variable "timestamp"  (declared at line 85)
+            variable "Data"  (declared at line 95)
+          goto FREE;
+          ^
+Hardware\APP\EC200S\BswSrv_Ec200s.c(53): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "json_start"  (declared at line 58)
+            variable "json_len"  (declared at line 63)
+            variable "json_data"  (declared at line 64)
+            variable "root"  (declared at line 71)
+            variable "device_id"  (declared at line 73)
+            variable "cmd"  (declared at line 79)
+            variable "timestamp"  (declared at line 85)
+            variable "Data"  (declared at line 95)
+  		goto FREE;
+  		^
+Hardware\APP\EC200S\BswSrv_Ec200s.c(61): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "json_len"  (declared at line 63)
+            variable "json_data"  (declared at line 64)
+            variable "root"  (declared at line 71)
+            variable "device_id"  (declared at line 73)
+            variable "cmd"  (declared at line 79)
+            variable "timestamp"  (declared at line 85)
+            variable "Data"  (declared at line 95)
+          goto FREE;
+          ^
+Hardware\APP\EC200S\BswSrv_Ec200s.c(67): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "root"  (declared at line 71)
+            variable "device_id"  (declared at line 73)
+            variable "cmd"  (declared at line 79)
+            variable "timestamp"  (declared at line 85)
+            variable "Data"  (declared at line 95)
+          goto FREE;
+          ^
+Hardware\APP\EC200S\BswSrv_Ec200s.c: 8 warnings, 0 errors
+compiling BswAbstr_Ec200s.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(117): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+  					if (strstr(AbstrEc200sInfo.ec200sIccid,"898604") != NULL)
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(404): warning:  #223-D: function "Delay_ms" declared implicitly
+  	Delay_ms(1000);
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(473): warning:  #223-D: function "Delay_ms" declared implicitly
+  		Delay_ms(20);
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(815): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(816): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      memcpy(MqttInfo_t.client_id, SystemInfo.device_id, strlen(SystemInfo.device_id));
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(817): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+  	sprintf(MqttInfo_t.topic_pub_req,"cp/lechongbao/topic/%s",SystemInfo.device_id);
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(818): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+  	sprintf(MqttInfo_t.topic_sub_req,"cs/lechongbao/topic/%s",SystemInfo.device_id);
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(819): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+  	sprintf(MqttInfo_t.topic_pub_res,"cp/lechongbao/topic/%s",SystemInfo.device_id);
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(820): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "char *restrict"
+  	sprintf(MqttInfo_t.topic_sub_res,"cs/lechongbao/topic/%s",SystemInfo.device_id);
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(842): warning:  #225-D: the format string ends before this argument
+  	sprintf((void *)cmd_ack, "OK", clientidx);
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(2096): warning:  #223-D: function "Delay_ms" declared implicitly
+  		Delay_ms(20);
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(2269): warning:  #223-D: function "Delay_ms" declared implicitly
+  			Delay_ms(20);
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(2311): warning:  #223-D: function "App_Flash_Erase" declared implicitly
+                              App_Flash_Erase(APP_BACK_ADDR,APP_BACK_SIZE+4*1024);
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(2373): warning:  #177-D: variable "ck"  was declared but never referenced
+  									uint16_t ck = 0;
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(2374): warning:  #177-D: variable "rbyte"  was declared but never referenced
+  									uint8_t rbyte = 0;
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(2207): warning:  #550-D: variable "calculateSum"  was set but never used
+  	uint16_t calculateSum = 0;
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(2208): warning:  #177-D: variable "i"  was declared but never referenced
+  	uint32_t i = 0;	
+Hardware\APP\EC200S\BswAbstr_Ec200s.c(2230): warning:  #177-D: label "START"  was declared but never referenced
+  START:
+Hardware\APP\EC200S\BswAbstr_Ec200s.c: 19 warnings, 0 errors
+compiling fm175xx.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\NFC\fm175xx.c: 1 warning, 0 errors
 compiling mcard.c...
 .\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
   #else if(MQTT_TEST == 2)
@@ -47,10 +243,172 @@ Hardware\APP\NFC\mcard.c(599): warning:  #177-D: variable "cardstep"  was declar
 Hardware\APP\NFC\mcard.c(600): warning:  #550-D: variable "card_id"  was set but never used
   static uint32_t card_id = 0;
 Hardware\APP\NFC\mcard.c: 9 warnings, 0 errors
+compiling netmessage.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\MESSAGE\netmessage.c(54): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON_AddItemToObject(root,"device_id",cJSON_CreateString(SystemInfo.device_id));
+Hardware\APP\MESSAGE\netmessage.c(58): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON_AddItemToObject(data,"version_4g",cJSON_CreateString(SystemInfo.ec200_version));
+Hardware\APP\MESSAGE\netmessage.c(59): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON_AddItemToObject(data,"iccid",cJSON_CreateString(SystemInfo.sim_id));
+Hardware\APP\MESSAGE\netmessage.c(64): warning:  #223-D: function "CRC16" declared implicitly
+      CRC16(data_body,strlen(data_body),&crc);
+Hardware\APP\MESSAGE\netmessage.c(68): warning:  #188-D: enumerated type mixed with another type
+      Abstr_Ec200sMqttPublish((void*)json_body, strlen(json_body), 1,DEVICE_REQ);
+Hardware\APP\MESSAGE\netmessage.c(45): warning:  #177-D: variable "pGunInfo"  was declared but never referenced
+      SystemPortInfo_t *pGunInfo = NULL;
+Hardware\APP\MESSAGE\netmessage.c(129): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON_AddItemToObject(root,"device_id",cJSON_CreateString(SystemInfo.device_id));
+Hardware\APP\MESSAGE\netmessage.c(133): warning:  #167-D: argument of type "uint32_t *" is incompatible with parameter of type "const int *"
+      ntc = cJSON_CreateIntArray(NTC,3);
+Hardware\APP\MESSAGE\netmessage.c(134): warning:  #167-D: argument of type "uint32_t *" is incompatible with parameter of type "const int *"
+      port = cJSON_CreateIntArray(portnum,PORTMAX);
+Hardware\APP\MESSAGE\netmessage.c(135): warning:  #167-D: argument of type "uint32_t *" is incompatible with parameter of type "const int *"
+      port_status = cJSON_CreateIntArray(portstatus,PORTMAX);
+Hardware\APP\MESSAGE\netmessage.c(136): warning:  #167-D: argument of type "uint32_t *" is incompatible with parameter of type "const int *"
+      fault_code = cJSON_CreateIntArray(fault,PORTMAX);
+Hardware\APP\MESSAGE\netmessage.c(137): warning:  #167-D: argument of type "uint32_t *" is incompatible with parameter of type "const int *"
+      voltage = cJSON_CreateIntArray(voltage_data,PORTMAX);
+Hardware\APP\MESSAGE\netmessage.c(138): warning:  #167-D: argument of type "uint32_t *" is incompatible with parameter of type "const int *"
+      current = cJSON_CreateIntArray(current_data,PORTMAX);
+Hardware\APP\MESSAGE\netmessage.c(139): warning:  #167-D: argument of type "uint32_t *" is incompatible with parameter of type "const int *"
+      power = cJSON_CreateIntArray(power_data,PORTMAX);
+Hardware\APP\MESSAGE\netmessage.c(140): warning:  #167-D: argument of type "uint32_t *" is incompatible with parameter of type "const int *"
+      elec = cJSON_CreateIntArray(elec_data,PORTMAX);
+Hardware\APP\MESSAGE\netmessage.c(141): warning:  #167-D: argument of type "uint32_t *" is incompatible with parameter of type "const int *"
+      money = cJSON_CreateIntArray(money_data,PORTMAX);
+Hardware\APP\MESSAGE\netmessage.c(170): warning:  #223-D: function "CRC16" declared implicitly
+      CRC16(data_body,strlen(data_body),&crc);
+Hardware\APP\MESSAGE\netmessage.c(179): warning:  #188-D: enumerated type mixed with another type
+      Abstr_Ec200sMqttPublish((void*)json_body, strlen(json_body), 1,DEVICE_REQ);
+Hardware\APP\MESSAGE\netmessage.c(214): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON_AddItemToObject(root,"device_id",cJSON_CreateString(SystemInfo.device_id));
+Hardware\APP\MESSAGE\netmessage.c(219): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON_AddItemToObject(data,"card_id",cJSON_CreateString(gChgInfo.current_usr_card_id));
+Hardware\APP\MESSAGE\netmessage.c(222): warning:  #223-D: function "CRC16" declared implicitly
+      CRC16(data_body,strlen(data_body),&crc);
+Hardware\APP\MESSAGE\netmessage.c(226): warning:  #188-D: enumerated type mixed with another type
+      Abstr_Ec200sMqttPublish((void*)json_body, strlen(json_body), 1,DEVICE_REQ);
+Hardware\APP\MESSAGE\netmessage.c(260): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON_AddItemToObject(root,"device_id",cJSON_CreateString(SystemInfo.device_id));
+Hardware\APP\MESSAGE\netmessage.c(264): warning:  #167-D: argument of type "uint32_t *" is incompatible with parameter of type "const int *"
+      mcc = cJSON_CreateIntArray(location_mcc,3);
+Hardware\APP\MESSAGE\netmessage.c(265): warning:  #167-D: argument of type "uint32_t *" is incompatible with parameter of type "const int *"
+      mnc = cJSON_CreateIntArray(location_mnc,3);
+Hardware\APP\MESSAGE\netmessage.c(266): warning:  #167-D: argument of type "uint32_t *" is incompatible with parameter of type "const int *"
+      lac = cJSON_CreateIntArray(location_lac,3);
+Hardware\APP\MESSAGE\netmessage.c(267): warning:  #167-D: argument of type "uint32_t *" is incompatible with parameter of type "const int *"
+      cellid = cJSON_CreateIntArray(location_cellid,3);
+Hardware\APP\MESSAGE\netmessage.c(268): warning:  #167-D: argument of type "uint32_t *" is incompatible with parameter of type "const int *"
+      singnal = cJSON_CreateIntArray(location_signal,3);
+Hardware\APP\MESSAGE\netmessage.c(278): warning:  #223-D: function "CRC16" declared implicitly
+      CRC16(data_body,strlen(data_body),&crc);
+Hardware\APP\MESSAGE\netmessage.c(282): warning:  #188-D: enumerated type mixed with another type
+      Abstr_Ec200sMqttPublish((void*)json_body, strlen(json_body), 1,DEVICE_REQ);
+Hardware\APP\MESSAGE\netmessage.c(242): warning:  #177-D: variable "pGunInfo"  was declared but never referenced
+      SystemPortInfo_t *pGunInfo = NULL;
+Hardware\APP\MESSAGE\netmessage.c(308): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON_AddItemToObject(root,"device_id",cJSON_CreateString(SystemInfo.device_id));
+Hardware\APP\MESSAGE\netmessage.c(312): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON_AddItemToObject(data,"order",cJSON_CreateString(chargeinfo->order));
+Hardware\APP\MESSAGE\netmessage.c(317): warning:  #223-D: function "CRC16" declared implicitly
+      CRC16(data_body,strlen(data_body),&crc);
+Hardware\APP\MESSAGE\netmessage.c(321): warning:  #188-D: enumerated type mixed with another type
+      Abstr_Ec200sMqttPublish((void*)json_body, strlen(json_body), 1,DEVICE_REQ);
+Hardware\APP\MESSAGE\netmessage.c(350): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON_AddItemToObject(root,"device_id",cJSON_CreateString(SystemInfo.device_id));
+Hardware\APP\MESSAGE\netmessage.c(356): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON_AddItemToObject(data,"order",cJSON_CreateString(order->orderNo));
+Hardware\APP\MESSAGE\netmessage.c(364): warning:  #167-D: argument of type "uint32_t *" is incompatible with parameter of type "const int *"
+      power_seg_array = cJSON_CreateIntArray(order->chargepowersegment,SEGMENT_NUM_MAX);
+Hardware\APP\MESSAGE\netmessage.c(368): warning:  #223-D: function "CRC16" declared implicitly
+      CRC16(data_body,strlen(data_body),&crc);
+Hardware\APP\MESSAGE\netmessage.c(372): warning:  #188-D: enumerated type mixed with another type
+      Abstr_Ec200sMqttPublish((void*)json_body, strlen(json_body), 1,DEVICE_REQ);
+Hardware\APP\MESSAGE\netmessage.c(402): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON_AddItemToObject(root,"device_id",cJSON_CreateString(SystemInfo.device_id));
+Hardware\APP\MESSAGE\netmessage.c(409): warning:  #223-D: function "CRC16" declared implicitly
+      CRC16(data_body,strlen(data_body),&crc);
+Hardware\APP\MESSAGE\netmessage.c(413): warning:  #188-D: enumerated type mixed with another type
+      Abstr_Ec200sMqttPublish((void*)json_body, strlen(json_body), 1,DEVICE_REQ);
+Hardware\APP\MESSAGE\netmessage.c(431): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON *root = cJSON_Parse(data);
+Hardware\APP\MESSAGE\netmessage.c(501): warning:  #223-D: function "Delay_ms" declared implicitly
+      Delay_ms(100);
+Hardware\APP\MESSAGE\netmessage.c(435): warning:  #177-D: variable "ret"  was declared but never referenced
+      uint8_t ret = 0;
+Hardware\APP\MESSAGE\netmessage.c(512): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON *root = cJSON_Parse(data);
+Hardware\APP\MESSAGE\netmessage.c(534): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      if (strcmp(portinfo->order,analysis_data->valuestring) == 0)
+Hardware\APP\MESSAGE\netmessage.c(513): warning:  #550-D: variable "chargeinfo"  was set but never used
+      Charge_Param *chargeinfo = NULL;
+Hardware\APP\MESSAGE\netmessage.c(547): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON *root = cJSON_Parse(data);
+Hardware\APP\MESSAGE\netmessage.c(568): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON *root = cJSON_Parse(data);
+Hardware\APP\MESSAGE\netmessage.c(583): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON *root = cJSON_Parse(data);
+Hardware\APP\MESSAGE\netmessage.c(625): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON *root = cJSON_Parse(data);
+Hardware\APP\MESSAGE\netmessage.c(658): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON_AddItemToObject(root,"device_id",cJSON_CreateString(SystemInfo.device_id));
+Hardware\APP\MESSAGE\netmessage.c(664): warning:  #223-D: function "CRC16" declared implicitly
+      CRC16(data_body,strlen(data_body),&crc);
+Hardware\APP\MESSAGE\netmessage.c(668): warning:  #188-D: enumerated type mixed with another type
+      Abstr_Ec200sMqttPublish((void*)json_body, strlen(json_body), 1,DEVICE_REQ);
+Hardware\APP\MESSAGE\netmessage.c(682): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON *root = cJSON_Parse(data);
+Hardware\APP\MESSAGE\netmessage.c(684): warning:  #550-D: variable "ret"  was set but never used
+      int ret = 0;
+Hardware\APP\MESSAGE\netmessage.c(697): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON *root = cJSON_Parse(data);
+Hardware\APP\MESSAGE\netmessage.c(714): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON_AddItemToObject(root,"device_id",cJSON_CreateString(SystemInfo.device_id));
+Hardware\APP\MESSAGE\netmessage.c(721): warning:  #223-D: function "CRC16" declared implicitly
+      CRC16(data_body,strlen(data_body),&crc);
+Hardware\APP\MESSAGE\netmessage.c(725): warning:  #188-D: enumerated type mixed with another type
+      Abstr_Ec200sMqttPublish((void*)json_body, strlen(json_body), 1,DEVICE_REQ);
+Hardware\APP\MESSAGE\netmessage.c(740): warning:  #167-D: argument of type "uint8_t *" is incompatible with parameter of type "const char *"
+      cJSON *root = cJSON_Parse(data);
+Hardware\APP\MESSAGE\netmessage.c: 64 warnings, 0 errors
+compiling Device_check.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\CHECK\Device_check.c(270): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+          App_Get_Rtc_Time(day);
+Hardware\APP\CHECK\Device_check.c(317): warning:  #514-D: pointless comparison of unsigned integer with a negative constant
+                  if(ret == FAIL)
+Hardware\APP\CHECK\Device_check.c: 3 warnings, 0 errors
+compiling App_GD25xx.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\FLASH\App_GD25xx.c(63): warning:  #550-D: variable "cmd"  was set but never used
+  	uint8_t cmd[4];
+Hardware\APP\FLASH\App_GD25xx.c(284): warning:  #177-D: variable "cmd"  was declared but never referenced
+  	uint8_t cmd = GD25_Manufacturer_OR_Device_ID;
+Hardware\APP\FLASH\App_GD25xx.c: 3 warnings, 0 errors
+compiling App_Voice.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\VOICE\App_Voice.c: 1 warning, 0 errors
+compiling App_CkbProto.c...
+.\Hardware\global.h(43): warning:  #14-D: extra text after expected end of preprocessing directive
+  #else if(MQTT_TEST == 2)
+Hardware\APP\KEYBOARD\App_CkbProto.c(13): warning:  #188-D: enumerated type mixed with another type
+  bool led_keyboard = 0;
+Hardware\APP\KEYBOARD\App_CkbProto.c(27): warning:  #223-D: function "Delay_ms" declared implicitly
+  		Delay_ms(1000);
+Hardware\APP\KEYBOARD\App_CkbProto.c(67): warning:  #188-D: enumerated type mixed with another type
+      pLedCtrl->lightOnFlag = lightOnFlag;
+Hardware\APP\KEYBOARD\App_CkbProto.c(116): warning:  #177-D: variable "strTmp"  was declared but never referenced
+  	uint8_t strTmp[256] = {0};
+Hardware\APP\KEYBOARD\App_CkbProto.c: 5 warnings, 0 errors
 linking...
-Program Size: Code=67072 RO-data=1816 RW-data=688 ZI-data=64832  
+Program Size: Code=67440 RO-data=1816 RW-data=684 ZI-data=64828  
 After Build - User command #1: fromelf --bin  -o  .\tmp\output\charge.bin   .\tmp\output\GD32F303_GateWay.axf
-".\tmp\output\GD32F303_GateWay.axf" - 0 Error(s), 9 Warning(s).
+".\tmp\output\GD32F303_GateWay.axf" - 0 Error(s), 146 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -61,10 +419,10 @@ Package Vendor: GigaDevice
 
 <h2>Collection of Component include folders:</h2>
   .\RTE\_GateWay
-  M:\KEIL5\ARM\PACK\GigaDevice\GD32F30x_DFP\2.2.3\Device\Include
+  D:\swtool\Keil5\Packs\GigaDevice\GD32F30x_DFP\2.2.3\Device\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:09
 </pre>
 </body>
 </html>

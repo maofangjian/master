@@ -2,8 +2,8 @@
  * @Author: chenyuan
  * @Date: 2025-03-17 14:15:29
  * @LastEditors: chenyuan
- * @LastEditTime: 2025-07-08 11:26:12
- * @FilePath: \FreeRtos实验0703\13.FreeRTOS实验\Hardware\global.h
+ * @LastEditTime: 2025-07-22 16:28:01
+ * @FilePath: \master\Hardware\global.h
  * @Description: 
  * @
  * @Copyright (c) 2025 by ${git_name_email}, All Rights Reserved. 
@@ -22,7 +22,7 @@
 #include "semphr.h"
 #include "task.h"
 
-#define SOFT_VERSION     "V1.0.4-S1"
+#define SOFT_VERSION     "V1.0.5-S1"
 
 
 #define ABS(X) ((X) >= 0 ? (X) : (-X))

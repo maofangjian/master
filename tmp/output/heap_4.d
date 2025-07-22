@@ -1,10 +1,10 @@
 .\tmp\output\heap_4.o: FreeRTOS\portable\MemMang\heap_4.c
-.\tmp\output\heap_4.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\tmp\output\heap_4.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\tmp\output\heap_4.o: .\FreeRTOS\include\FreeRTOS.h
-.\tmp\output\heap_4.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stddef.h
-.\tmp\output\heap_4.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdint.h
+.\tmp\output\heap_4.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+.\tmp\output\heap_4.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\tmp\output\heap_4.o: .\Hardware\FreeRTOSConfig.h
-.\tmp\output\heap_4.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h
+.\tmp\output\heap_4.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\tmp\output\heap_4.o: .\FreeRTOS\include\projdefs.h
 .\tmp\output\heap_4.o: .\FreeRTOS\include\portable.h
 .\tmp\output\heap_4.o: .\FreeRTOS\include\deprecated_definitions.h

@@ -2,7 +2,7 @@
 .\tmp\output\usart.o: Hardware\Config\USART\usart.h
 .\tmp\output\usart.o: .\Library\Firmware\CMSIS\GD\GD32F30x\Include\gd32f30x.h
 .\tmp\output\usart.o: .\Library\Firmware\CMSIS\core_cm4.h
-.\tmp\output\usart.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdint.h
+.\tmp\output\usart.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\tmp\output\usart.o: .\Library\Firmware\CMSIS\core_cmInstr.h
 .\tmp\output\usart.o: .\Library\Firmware\CMSIS\core_cmFunc.h
 .\tmp\output\usart.o: .\Library\Firmware\CMSIS\core_cm4_simd.h
@@ -33,10 +33,10 @@
 .\tmp\output\usart.o: .\Library\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_misc.h
 .\tmp\output\usart.o: .\Library\Firmware\GD32F30x_standard_peripheral\Include\gd32f30x_exmc.h
 .\tmp\output\usart.o: .\Hardware\Config\FIFO\fifo.h
-.\tmp\output\usart.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h
-.\tmp\output\usart.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\string.h
+.\tmp\output\usart.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
+.\tmp\output\usart.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\string.h
 .\tmp\output\usart.o: .\FreeRTOS\include\FreeRTOS.h
-.\tmp\output\usart.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stddef.h
+.\tmp\output\usart.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
 .\tmp\output\usart.o: .\Hardware\FreeRTOSConfig.h
 .\tmp\output\usart.o: .\FreeRTOS\include\projdefs.h
 .\tmp\output\usart.o: .\FreeRTOS\include\portable.h

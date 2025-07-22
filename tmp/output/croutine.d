@@ -1,9 +1,9 @@
 .\tmp\output\croutine.o: FreeRTOS\src\croutine.c
 .\tmp\output\croutine.o: .\FreeRTOS\include\FreeRTOS.h
-.\tmp\output\croutine.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stddef.h
-.\tmp\output\croutine.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdint.h
+.\tmp\output\croutine.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+.\tmp\output\croutine.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\tmp\output\croutine.o: .\Hardware\FreeRTOSConfig.h
-.\tmp\output\croutine.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h
+.\tmp\output\croutine.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\tmp\output\croutine.o: .\FreeRTOS\include\projdefs.h
 .\tmp\output\croutine.o: .\FreeRTOS\include\portable.h
 .\tmp\output\croutine.o: .\FreeRTOS\include\deprecated_definitions.h

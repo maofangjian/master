@@ -1,4 +1,4 @@
---cpu=Cortex-M4.fp
+--cpu=Cortex-M4.fp.sp
 ".\tmp\output\gd32f30x_it.o"
 ".\tmp\output\main.o"
 ".\tmp\output\systick.o"

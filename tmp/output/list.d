@@ -1,10 +1,10 @@
 .\tmp\output\list.o: FreeRTOS\src\list.c
-.\tmp\output\list.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\tmp\output\list.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
 .\tmp\output\list.o: .\FreeRTOS\include\FreeRTOS.h
-.\tmp\output\list.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stddef.h
-.\tmp\output\list.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdint.h
+.\tmp\output\list.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stddef.h
+.\tmp\output\list.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\tmp\output\list.o: .\Hardware\FreeRTOSConfig.h
-.\tmp\output\list.o: M:\KEIL5\ARM\ARMCC\Bin\..\include\stdio.h
+.\tmp\output\list.o: D:\swtool\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\tmp\output\list.o: .\FreeRTOS\include\projdefs.h
 .\tmp\output\list.o: .\FreeRTOS\include\portable.h
 .\tmp\output\list.o: .\FreeRTOS\include\deprecated_definitions.h

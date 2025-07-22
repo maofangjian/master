@@ -28,7 +28,6 @@ enum{
     REMOTE_CONTROL_REBOOT = 0, //设备重启
     REMOTE_CONTROL_SETIP, //切换ip地址
 };
-void App_SendChargeStartNotify(void);
 void App_ChargeStartNotify(uint8_t port);
 void App_ChargeStopNotify(ORDER_INFO *order);
 void Bsp_MessagePack(MSG_CMD cmd,uint8_t *data,uint16_t len,uint8_t req);

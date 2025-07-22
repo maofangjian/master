@@ -15,6 +15,30 @@
 #include "cJSON.h"
 uint8_t UnpackBuf[1024] = {0};
 uint8_t heart_error_times = 0;
+
+/* 声明外部符号 */
+
+void print_heap_status(void) 
+{
+    size_t block_size = 1024; // 从小块开始尝试
+    size_t total_allocated = 0;
+    void *blocks[32]; // 保存分配指针
+    int count = 0;
+
+    // 逐步尝试分配
+    while (count < 32 && (blocks[count] = malloc(block_size)) != NULL) {
+        total_allocated += block_size;
+        count++;
+    }
+
+    // 立即释放所有分配的内存
+    for (int i = 0; i < count; i++) {
+        free(blocks[i]);
+    }
+
+    printf("Protected Check:\n");
+    printf("  Max Contiguous Free: %zu bytes\n", total_allocated);
+}
 void App_StartUpMessage(void)
 {
     cJSON *root = NULL,*data = NULL;
@@ -57,28 +81,6 @@ void App_StartUpMessage(void)
 }
 
 
-void App_SendChargeStartNotify(void)
-{
-    static uint32_t time = 0;
-    SystemPortInfo_t *portinfo =NULL;
-    if(App_GetRtcCount() - time >= 10)
-    {
-        time = App_GetRtcCount();
-        for (uint8_t i = 0; i < PORTMAX; i++)
-        {
-           portinfo = &SystemOrderInfo[i];
-            if (portinfo->gunState != PORT_IDLE && portinfo->isSync != CHARGE_NORMAL && portinfo->chargesendcnt <= 5)
-            {
-                portinfo->chargesendcnt++;
-                App_ChargeStartNotify(i);
-            }
-            
-        }
-        
-    }
-}
-
-
 void App_HeartBeatSendMessage(void)
 {
 
@@ -91,7 +93,7 @@ void App_HeartBeatSendMessage(void)
     char order_data[PORTMAX][ORDER_LEN+1] = {0};
     uint32_t crc = 0;
     uint32_t time  = App_GetRtcCount();
-
+    
     LOG("heart beat send \r\n");
     root = cJSON_CreateObject();
     data = cJSON_CreateObject();
@@ -160,11 +162,22 @@ void App_HeartBeatSendMessage(void)
     cJSON_AddItemToObject(data,"port_info",port_info);
     cJSON_AddItemToObject(root,"args",data);
     data_body = cJSON_PrintUnformatted(data);
+    if (data_body == NULL)
+    {
+        goto exit;
+    }
+    
     CRC16(data_body,strlen(data_body),&crc);
     cJSON_AddNumberToObject(root,"crc",crc);
     json_body = cJSON_PrintUnformatted(root);
+    if (json_body == NULL)
+    {
+        goto exit;
+    }
+    
     LOG("JSON data :%s\r\n",json_body);
     Abstr_Ec200sMqttPublish((void*)json_body, strlen(json_body), 1,DEVICE_REQ);
+exit:
     cJSON_Delete(root);
     
     if (data_body != NULL)
@@ -184,6 +197,7 @@ void App_HeartBeatSendMessage(void)
         AbstrEc200sInfo.ec200sState.Bits.ec200sConnectState = 0;
 		Abstr_Ec200s_SendNotify();
     }
+    
 }
 
 void App_SendCardAuthReq(uint8_t flag)
@@ -281,25 +295,7 @@ void App_LocationMessage(void)
 
 void App_RemoteStartChargingAck(SystemPortInfo_t *chargeinfo,uint32_t res,uint32_t failreason)
 {
-    // bool encode_status;
-    // uint8_t send_data[256] = {0};
-    // ya_REMOTE_START_RES charge_ackmsg = ya_REMOTE_START_RES_init_default;
-    // pb_ostream_t charge_stream;
-    // memset(send_data,0,sizeof(send_data));
-    // memcpy(charge_ackmsg.orderNo,chargeinfo->order,sizeof(chargeinfo->order));
-    // charge_ackmsg.slotId = chargeinfo->gunId;
-    // charge_ackmsg.code = 1;
-    // charge_stream = pb_ostream_from_buffer(&send_data[2],sizeof(send_data)-2);
-    // encode_status = pb_encode(&charge_stream,ya_REMOTE_START_RES_fields,&charge_ackmsg);
-    // if(encode_status)
-    // {
-    //     memcpy(&send_data[0],"03",2);
-    //     Abstr_Ec200sMqttPublish(send_data,charge_stream.bytes_written+2,QOS_LEVEL_1,DEVICE_RES);  
-    // }
-    // else
-    // {
-    //     LOG("remote charge encode fail\r\n");
-    // }
+
     cJSON *root = NULL,*data = NULL;
     char *json_body = NULL; 
     char *data_body = NULL; 
@@ -332,67 +328,16 @@ void App_RemoteStartChargingAck(SystemPortInfo_t *chargeinfo,uint32_t res,uint32
     {
         free(json_body);
     }
+    
 }
 
 void App_ChargeStartNotify(uint8_t port)
 {
-    // bool encode_status;
-    // SystemPortInfo_t *chargeinfo = &SystemOrderInfo[port];
-    // ya_START_NOTIFY_REQ chargenotify_message = ya_START_NOTIFY_REQ_init_default;
-    // uint8_t send_data[256] = {0};
-    // pb_ostream_t chargenotify_stream;
-    // memset(send_data,0,sizeof(send_data));
-    // memcpy(chargenotify_message.orderNo,chargeinfo->order,sizeof(chargeinfo->order));
-    // chargenotify_message.slotId = chargeinfo->gunId;
-    // chargenotify_message.startType = 1;
-    // chargenotify_message.chargeStartTime = chargeinfo->startTime;
-    // chargenotify_stream = pb_ostream_from_buffer(&send_data[2],sizeof(send_data)-2);
-    // encode_status = pb_encode(&chargenotify_stream,ya_REMOTE_START_RES_fields,&chargenotify_message);
-    // if(encode_status)
-    // {
-    //     memcpy(&send_data[0],"04",2);
-    //     Abstr_Ec200sMqttPublish(send_data,chargenotify_stream.bytes_written+2,QOS_LEVEL_1,DEVICE_REQ);  
-    // }
-    // else
-    // {
-    //     LOG("remote charge encode fail\r\n");
-    // }
+
 }
 
 void App_ChargeStopNotify(ORDER_INFO *order)
 {
-    // bool encode_status;
-    // uint8_t send_data[512] = {0};
-    // ya_STOP_NOTIFY_REQ stopnotify_message = ya_STOP_NOTIFY_REQ_init_default;
-    // pb_ostream_t stopnotify_stream;
-    // memset(send_data,0,sizeof(send_data));
-    // memcpy(stopnotify_message.orderNo,order->orderNo,sizeof(order->orderNo));
-    // stopnotify_message.avgPower = order->averagepower;
-    // stopnotify_message.chargeStopTime = order->stoptime;
-    // stopnotify_message.chargeStartTime = order->starttime;
-    // stopnotify_message.slotId = order->port;
-    // stopnotify_message.stopReason = order->stopreason;
-    // stopnotify_message.totalElectric = order->stopelec - order->startelec;
-    // if(order->chargetime  >= 2)
-    // {
-    //     stopnotify_message.realChargeTime = (order->chargetime - 2)*60;
-    // }
-    // else
-    // {
-    //     stopnotify_message.realChargeTime = 0;
-    // }
-    // stopnotify_stream = pb_ostream_from_buffer(&send_data[2],sizeof(send_data)-2);
-    // encode_status = pb_encode(&stopnotify_stream,ya_STOP_NOTIFY_REQ_fields,&stopnotify_message);
-    // if(encode_status)
-    // {
-    //     LOG("stop port:%d stopreason :%d order :%s averpower :%d chargetime :%d\r\n",stopnotify_message.slotId,stopnotify_message.stopReason,stopnotify_message.orderNo,stopnotify_message.avgPower,stopnotify_message.realChargeTime);
-    //     memcpy(&send_data[0],"06",2);
-    //     Abstr_Ec200sMqttPublish(send_data,stopnotify_stream.bytes_written+2,QOS_LEVEL_1,DEVICE_REQ);  
-    // }
-    // else
-    // {
-    //     LOG("remote charge encode fail\r\n");
-    // }
     cJSON *root = NULL,*data = NULL,*power_seg_array = NULL;
     char *json_body = NULL; 
     char *data_body = NULL; 
@@ -434,28 +379,13 @@ void App_ChargeStopNotify(ORDER_INFO *order)
     {
         free(json_body);
     }
+    
 }
 
 
 void App_UpgradeMessageAck(void)
 {
-    // bool encode_status;
-    // ya_UPGRADE_RES upgrade_ackmsg = ya_UPGRADE_RES_init_default;
-    // pb_ostream_t upgrade_stream;
-    // uint8_t send_data[128] = {0};
-    // memset(send_data,0,sizeof(send_data));
-    // upgrade_ackmsg.code = 1;
-    // upgrade_stream = pb_ostream_from_buffer(&send_data[2],sizeof(send_data)-2);
-    // encode_status = pb_encode(&upgrade_stream,ya_UPGRADE_RES_fields,&upgrade_ackmsg);
-    // if(encode_status)
-    // {
-    //     memcpy(&send_data[0],"07",2);
-    //     Abstr_Ec200sMqttPublish(send_data,upgrade_stream.bytes_written+2,QOS_LEVEL_1,DEVICE_RES); 
-    // }
-    // else
-    // {
-    //     LOG("remote charge encode fail\r\n");
-    // }
+
 }
 
 void App_RemoteStopChargingAck(uint8_t port)
@@ -490,29 +420,9 @@ void App_RemoteStopChargingAck(uint8_t port)
     {
         free(json_body);
     }
+    
 }
 
-void App_SetServerAck(void)
-{
-    // bool encode_status;
-    // ya_SET_SERVER_RES setserver_ackmsg = ya_SET_SERVER_RES_init_zero;
-    // pb_ostream_t upgrade_stream;
-    // uint8_t send_data[128] = {0};
-    // memset(send_data,0,sizeof(send_data));
-    // setserver_ackmsg.code = 0;
-    // upgrade_stream = pb_ostream_from_buffer(&send_data[2],sizeof(send_data)-2);
-    // encode_status = pb_encode(&upgrade_stream,ya_SET_SERVER_RES_fields,&setserver_ackmsg);
-    // if(encode_status)
-    // {
-    //     memcpy(&send_data[0],"10",2);
-    //     LOG("set server ack success\r\n");
-    //     Abstr_Ec200sMqttPublish(send_data,upgrade_stream.bytes_written+2,QOS_LEVEL_1,DEVICE_RES); 
-    // }
-    // else
-    // {
-    //     LOG("remote charge encode fail\r\n");
-    // }
-}
 
 
 void App_RemoteStartChargingHandler(uint8_t *data,uint16_t len)
@@ -594,9 +504,11 @@ void App_RemoteStartChargingHandler(uint8_t *data,uint16_t len)
     App_System_Order_Save();
     BswSrv_TtsPlayStartChgTip(portinfo->gunId);
     cJSON_Delete(root); 
+    
 }
 void App_RemoteStopChargingHandler(uint8_t *data,uint16_t len)
 {
+    
     cJSON *root = cJSON_Parse(data);
     Charge_Param *chargeinfo = NULL;
     uint8_t port = 0;
@@ -605,7 +517,15 @@ void App_RemoteStopChargingHandler(uint8_t *data,uint16_t len)
 
     port = analysis_data->valueint;
     if(port > PORTMAX)
-    return;
+    {
+        if (root != NULL)
+        {
+            cJSON_Delete(root); 
+            return;
+        }
+        
+    }
+    
     portinfo = &SystemOrderInfo[port- 1];
     LOG("port :%d\r\n",port);
     chargeinfo = &ChargeInfo[port-1];
@@ -619,6 +539,7 @@ void App_RemoteStopChargingHandler(uint8_t *data,uint16_t len)
     }
     
     cJSON_Delete(root); 
+    
 }
 
 void App_StartUpMessageHandler(uint8_t *data,uint16_t len)
@@ -695,31 +616,12 @@ void App_McardMessageHandler(uint8_t *data,uint16_t len)
 }
 
 
-void App_StartChargingNotifyHandler(uint8_t *data,uint16_t len)
-{
-    // bool decode_status;
-    // ya_START_NOTIFY_RES startcharge_unpack = ya_START_NOTIFY_RES_init_zero;
-    // pb_istream_t unpackstream = pb_istream_from_buffer(data, len);
-    // decode_status = pb_decode(&unpackstream,ya_START_NOTIFY_RES_fields,&startcharge_unpack);
-    // if(decode_status)
-    // {
-    //     if(startcharge_unpack.code == 0)
-    //     {
-    //         SystemPortInfo_t *portinfo = &SystemOrderInfo[startcharge_unpack.slotId - 1];
-    //         portinfo->isSync = CHARGE_NORMAL;
-    //         LOG("start charge notify :%d %s %d\r\n",startcharge_unpack.slotId,startcharge_unpack.orderNo,startcharge_unpack.code);
-    //     }
-    // }
-    // else
-    // {
-    //     LOG("device send location fail\r\n");
-    // }
-}
 
 
 
 void App_StopChargingNotifyHandler(uint8_t *data,uint16_t len)
 {
+    
     cJSON *root = cJSON_Parse(data);
     Charge_Param *chargeinfo = NULL;
     uint8_t result = 0,port = 0;
@@ -738,7 +640,8 @@ void App_StopChargingNotifyHandler(uint8_t *data,uint16_t len)
         LOG("remove order success\r\n");
     }
     
-    cJSON_Delete(root); 
+    cJSON_Delete(root);
+     
 }
 
 void App_UpgradeAckHandler(uint8_t result)
